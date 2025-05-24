@@ -130,7 +130,7 @@
     *   `s` - Substitute character(s) under cursor and enter Insert mode (equivalent to `cl`).
     *   `S` - Substitute entire current line(s) and enter Insert mode (equivalent to `cc`).
 
-*   Visual Selection (these commands start a selection mode; an operator can then be applied to the selection):
+*   Visual Selection:
     *   `v` - Start character-wise visual selection.
     *   `V` - Start line-wise visual selection.
     *   `Ctrl+v` - Start block-wise visual selection.
@@ -165,7 +165,7 @@
     *   `g??` - ROT13 encode current line.
 
 *   Folding:
-    *   `zf{motion}` - Create a fold for the text specified by motion (e.g., `zfap` for a paragraph; often used with visual selection).
+    *   `zf{motion}` - Create a fold for the text specified by motion.
     *   `zF` - Create a fold for the current line.
 
 
