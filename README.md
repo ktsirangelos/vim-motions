@@ -128,7 +128,7 @@
 
 *   `s` - Substitute:
     *   `s` - Substitute character(s) under cursor and enter Insert mode (equivalent to `cl` or `Ncl`).
-    *   `S` - Substitute entire current line(s) and enter Insert mode (equivalent to `cc` or `Ncc`).\
+    *   `S` - Substitute entire current line(s) and enter Insert mode (equivalent to `cc` or `Ncc`).  
     Note: Vim also has an `s` *operator* for `s{motion}`, e.g., `siw` to substitute inner word. The commands `s` and `S` are normal mode shortcuts.
 
 *   Visual Selection (these commands start a selection mode; an operator can then be applied to the selection):
@@ -137,7 +137,7 @@
     *   `Ctrl+v` - Start block-wise visual selection.
 
 *   Case Modification:
-    *   `~` - Swap case of character under cursor and move right.--
+    *   `~` - Swap case of character under cursor and move right.  
         Note: If 'tildeop' is set, `~` becomes an operator: `~{motion}` swaps case of text specified by motion.
     *   `g~{motion}` - Swap case of text specified by motion.
     *   `g~~` - Swap case of current line.
