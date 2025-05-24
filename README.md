@@ -72,7 +72,7 @@
 `{` - move to the beginning of the previous paragraph  
 `}` - move to the beginning of the next paragraph  
 
-`%` - move to the matching parenthesis  
+`%` - move to the matching closing character  
 `#` - move to the previous occurrence of the word under the cursor  
 `*` - move to the next occurrence of the word under the cursor  
 
