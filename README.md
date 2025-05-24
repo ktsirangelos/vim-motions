@@ -230,8 +230,8 @@ Use with operators: `operator + i/a + text_object`
 `gJ` - Join line below to current line (without space)  
 
 ### Number Operations
-`Ctrl + a` - Increment number under cursor by 1  
-`Ctrl + x` - Decrement number under cursor by 1  
+`Ctrl+a` - Increment number under cursor by 1  
+`Ctrl+x` - Decrement number under cursor by 1  
 
 ### Marks and Registers
 `ma` - Set mark `a`  
