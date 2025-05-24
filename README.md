@@ -112,24 +112,23 @@
 ### 1. Operators
 
 *   `d` - Delete:
-    *   `d{motion}` - Delete text specified by motion (e.g., `dw` delete word, `d$` delete to end of line).
+    *   `d{motion}` - Delete text specified by motion.
     *   `dd` - Delete current line.
     *   `D` - Delete from cursor to end of line (equivalent to `d$`).
 
 *   `c` - Change:
-    *   `c{motion}` - Change text specified by motion, then enter Insert mode (e.g., `cw` change word, `c$` change to end of line).
+    *   `c{motion}` - Change text specified by motion, then enter Insert mode.
     *   `cc` - Change current line and enter Insert mode.
-    *   `C` - Change from cursor to end of line and enter Insert mode (equivalent to `c$`). 
+    *   `C` - Change from cursor to end of line and enter Insert mode (equivalent to `c$`).
 
 *   `y` - Yank (copy):
-    *   `y{motion}` - Yank text specified by motion (e.g., `yw` yank word, `y$` yank to end of line).
+    *   `y{motion}` - Yank text specified by motion.
     *   `yy` - Yank current line.
-    *   `Y` - Yank current line (equivalent to `yy`, though some configurations map it to `y$`).
+    *   `Y` - Yank from cursor to end of line.
 
 *   `s` - Substitute:
-    *   `s` - Substitute character(s) under cursor and enter Insert mode (equivalent to `cl` or `Ncl`).
-    *   `S` - Substitute entire current line(s) and enter Insert mode (equivalent to `cc` or `Ncc`).  
-    Note: Vim also has an `s` *operator* for `s{motion}`, e.g., `siw` to substitute inner word. The commands `s` and `S` are normal mode shortcuts.
+    *   `s` - Substitute character(s) under cursor and enter Insert mode (equivalent to `cl`).
+    *   `S` - Substitute entire current line(s) and enter Insert mode (equivalent to `cc`).
 
 *   Visual Selection (these commands start a selection mode; an operator can then be applied to the selection):
     *   `v` - Start character-wise visual selection.
@@ -137,8 +136,7 @@
     *   `Ctrl+v` - Start block-wise visual selection.
 
 *   Case Modification:
-    *   `~` - Swap case of character under cursor and move right.  
-        Note: If 'tildeop' is set, `~` becomes an operator: `~{motion}` swaps case of text specified by motion.
+    *   `~` - Swap case of character under cursor and move right.
     *   `g~{motion}` - Swap case of text specified by motion.
     *   `g~~` - Swap case of current line.
     *   `gu{motion}` - Convert text specified by motion to lowercase.
@@ -170,8 +168,6 @@
     *   `zf{motion}` - Create a fold for the text specified by motion (e.g., `zfap` for a paragraph; often used with visual selection).
     *   `zF` - Create a fold for the current line.
 
-*   `g@` - Call 'operatorfunc':
-    *   `g@{motion}` - Call the function set by the 'operatorfunc' option, applying it to the text specified by motion.
 
 ### 2. Examples of Operator + Motion
 
@@ -189,7 +185,6 @@
 *   `>j` - Indent the current line and the line below
 *   `gUU` or `gUgU` - Convert the current line to uppercase
 *   `gUw` - Convert from the cursor to the beginning of the next word to uppercase
-
 *   `!!sort` - Sort the current line (filters the current line through the `sort` command)
 *   `!Guniq` - Make all lines from the current line to the end of the file unique
 
@@ -234,16 +229,12 @@
 
 *   `x` - Delete character under cursor (like `dl`)
 *   `X` - Delete character before cursor (like `dh`)
-
 *   `p` - Paste yanked/deleted text **p**after the cursor (if character-wise) or after the current line (if line-wise)
 *   `P` - Paste yanked/deleted text **P**before the cursor (if character-wise) or before the current line (if line-wise)
-
 *   `r{char}` - Replace the character under the cursor with `{char}` (stays in Normal mode)
-
 *   `.` - Repeat the last change
 *   `u` - Undo last change
 *   `Ctrl + r` - Redo last undone change
-
 *   `J` - Join the line below to the current line (adds a space)
 *   `gJ` - Join the line below to the current line (without adding a space)
 
