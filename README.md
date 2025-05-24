@@ -2,114 +2,114 @@
 
 ## Exiting
 
-`:q` - Close file
-`:qa` - Close all files
+`:q` - Close file  
+`:qa` - Close all files  
 
-`:w` - Save
-`:wq` / `:x` - Save and close file
+`:w` - Save  
+`:wq` / `:x` - Save and close file  
 
-`ZZ` - Save and quit
-`:q!` / `ZQ` - Quit without checking changes
+`ZZ` - Save and quit  
+`:q!` / `ZQ` - Quit without checking changes  
   
 ## Modes
   
-`ESC` - enter normal mode
+`ESC` - enter normal mode  
 
-`i` - enter insert mode (at cursor)
-`I` - enter insert mode (at the beginning of the line)
+`i` - enter insert mode (at cursor)  
+`I` - enter insert mode (at the beginning of the line)  
 
-`a` - enter insert mode (after cursor)
-`A` - enter insert mode (at the end of the line)
+`a` - enter insert mode (after cursor)  
+`A` - enter insert mode (at the end of the line)  
 
-`o` - open a new line below and enter insert mode
-`O` - open a new line above and enter insert mode
+`o` - open a new line below and enter insert mode  
+`O` - open a new line above and enter insert mode  
 
-`v` - enter visual mode
-`:` - enter command mode
-`R` - enter replace mode
+`v` - enter visual mode  
+`:` - enter command mode  
+`R` - enter replace mode  
 
 ### Navigation
 
-`:12` - move to line 12
+`:12` - move to line 12  
 
-`zz` - center the screen on the cursor
-`zt` - position cursor at the top of the screen
-`zb` - position cursor at the bottom of the screen
+`zz` - center the screen on the cursor  
+`zt` - position cursor at the top of the screen  
+`zb` - position cursor at the bottom of the screen  
 
-`Ctrl + u` - move half a page up
-`Ctrl + d` - move half a page down
+`Ctrl + u` - move half a page up  
+`Ctrl + d` - move half a page down  
 
-`Ctrl + e` - move page one line up
-`Ctrl + y` - move page one line down
+`Ctrl + e` - move page one line up  
+`Ctrl + y` - move page one line down  
 
-`Ctrl + i` - jump forward to next position
-`Ctrl + o` - jump back to previous position
+`Ctrl + i` - jump forward to next position  
+`Ctrl + o` - jump back to previous position  
 
-`H` - move to the top of the screen (High)
-`M` - move to the middle of the screen (Middle)
-`L` - move to the bottom of the screen (Low)
+`H` - move to the top of the screen (High)  
+`M` - move to the middle of the screen (Middle)  
+`L` - move to the bottom of the screen (Low)  
 
-`0` - move to the beginning of the line
-`$` - move to the end of the line
+`0` - move to the beginning of the line  
+`$` - move to the end of the line  
 
 ### Motions
 
-`h` - move left
-`j` - move down
-`k` - move up
-`l` - move right
+`h` - move left  
+`j` - move down  
+`k` - move up  
+`l` - move right  
 
-`12k` - move up 12 lines
-`12j` - move down 12 lines
+`12k` - move up 12 lines  
+`12j` - move down 12 lines  
 
-`gg` - move to the top of the file
-`G` - move to the bottom of the file
+`gg` - move to the top of the file  
+`G` - move to the bottom of the file  
 
-`0` - move to the beginning of the line
-`$` - move to the end of the line
+`0` - move to the beginning of the line  
+`$` - move to the end of the line  
 
-`(` - move to the beginning of the previous sentence
-`)` - move to the beginning of the next sentence
+`(` - move to the beginning of the previous sentence  
+`)` - move to the beginning of the next sentence  
 
-`{` - move to the beginning of the previous paragraph
-`}` - move to the beginning of the next paragraph
+`{` - move to the beginning of the previous paragraph  
+`}` - move to the beginning of the next paragraph  
 
-`%` - move to the matching parenthesis
-`#` - move to the previous occurrence of the word under the cursor
-`*` - move to the next occurrence of the word under the cursor
+`%` - move to the matching parenthesis  
+`#` - move to the previous occurrence of the word under the cursor  
+`*` - move to the next occurrence of the word under the cursor  
 
-`w` - move to the beginning of the next word
-`W` - move to the beginning of the next word (ignoring punctuation)
+`w` - move to the beginning of the next word  
+`W` - move to the beginning of the next word (ignoring punctuation)  
 
-`b` - move to the beginning of the previous word
-`B` - move to the beginning of the previous word (ignoring punctuation)
+`b` - move to the beginning of the previous word  
+`B` - move to the beginning of the previous word (ignoring punctuation)  
 
-`e` - move to the end of the next word
-`E` - move to the end of the next word (ignoring punctuation)
+`e` - move to the end of the next word  
+`E` - move to the end of the next word (ignoring punctuation)  
 
-`ge` - move to the end of the previous word
-`gE` - move to the end of the previous word (ignoring punctuation)
+`ge` - move to the end of the previous word  
+`gE` - move to the end of the previous word (ignoring punctuation)  
 
-`fx` - find the next occurrence of the character `x` in the line
-`Fx` - find the previous occurrence of the character `x` in the line
+`fx` - find the next occurrence of the character `x` in the line  
+`Fx` - find the previous occurrence of the character `x` in the line  
 
-`tx` - find the character `x` in the line and move the cursor to the character before it
-`Tx` - find the character `x` in the line and move the cursor to the character after it
+`tx` - find the character `x` in the line and move the cursor to the character before it  
+`Tx` - find the character `x` in the line and move the cursor to the character after it  
 
-`;` - repeat the last `f`, `F`, `t`, or `T` command
-`,` - repeat the last `f`, `F`, `t`, or `T` command in the opposite direction
+`;` - repeat the last `f`, `F`, `t`, or `T` command  
+`,` - repeat the last `f`, `F`, `t`, or `T` command in the opposite direction  
 
-`/pattern` - search forward for pattern
-`?pattern` - search backward for pattern
-`n` - repeat search in same direction
-`N` - repeat search in opposite direction
+`/pattern` - search forward for pattern  
+`?pattern` - search backward for pattern  
+`n` - repeat search in same direction  
+`N` - repeat search in opposite direction  
 
 ## Editing
 
 ### Operator Usage
 
-`operator + motion`
-`operator + text_object`
+`operator + motion`  
+`operator + text_object`  
 
 ### 1. Operators
 
@@ -131,7 +131,7 @@
 *   `s` - Substitute:
     *   `s` - Substitute character(s) under cursor and enter Insert mode (equivalent to `cl` or `Ncl`).
     *   `S` - Substitute entire current line(s) and enter Insert mode (equivalent to `cc` or `Ncc`).
-    *   (Note: Vim also has an `s` *operator* for `s{motion}`, e.g., `siw` to substitute inner word. The commands `s` and `S` are normal mode shortcuts.)
+    Note: Vim also has an `s` *operator* for `s{motion}`, e.g., `siw` to substitute inner word. The commands `s` and `S` are normal mode shortcuts.
 
 *   Visual Selection (these commands start a selection mode; an operator can then be applied to the selection):
     *   `v` - Start character-wise visual selection.
@@ -140,7 +140,7 @@
 
 *   Case Modification:
     *   `~` - Swap case of character under cursor and move right.
-        *   If 'tildeop' is set, `~` becomes an operator: `~{motion}` swaps case of text specified by motion.
+        Note: If 'tildeop' is set, `~` becomes an operator: `~{motion}` swaps case of text specified by motion.
     *   `g~{motion}` - Swap case of text specified by motion.
     *   `g~~` - Swap case of current line.
     *   `gu{motion}` - Convert text specified by motion to lowercase.
