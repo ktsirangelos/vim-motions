@@ -1,33 +1,27 @@
-# Vim Quick Reference
-
-## Exiting
-
-`:q` - Close file  
-`:qa` - Close all files  
-`:w` - Save  
-`:wq` / `:x` - Save and close file  
-`ZZ` - Save and quit  
-`:q!` / `ZQ` - Quit without checking changes  
+# Vim Reference
 
 ## Modes
 
 `ESC` - Normal mode  
+
 `i` - Insert mode (at cursor)  
 `I` - Insert mode (at beginning of line)  
 `a` - Insert mode (after cursor)  
 `A` - Insert mode (at end of line)  
 `o` - Open new line below and enter insert mode  
 `O` - Open new line above and enter insert mode  
+
 `v` - Visual mode (character-wise)  
 `V` - Visual mode (line-wise)  
 `Ctrl+v` - Visual mode (block-wise)  
+
 `:` - Command mode  
 `R` - Replace mode  
 
 ## Navigation
 
-`:12` - Go to line 12  
-`12G` - Go to line 12  
+`:{int}` - Go to line `{int}`  
+`{int}G` - Go to line `{int}`  
 
 `zz` - Center cursor on screen  
 `zt` - Cursor to top of screen  
@@ -35,13 +29,16 @@
 
 `Ctrl+u` - Half page up  
 `Ctrl+d` - Half page down  
+
 `Ctrl+b` - Full page up  
 `Ctrl+f` - Full page down  
+
 `Ctrl+e` - Scroll one line up  
 `Ctrl+y` - Scroll one line down  
 
 `Ctrl+o` - Jump to previous position  
 `Ctrl+i` - Jump to next position  
+
 `''` - Jump to last position  
 
 `H` - Top of screen  
@@ -49,8 +46,9 @@
 `L` - Bottom of screen  
 
 `0` - Beginning of line  
-`^` - First non-blank character  
 `$` - End of line  
+
+`^` - First non-blank character  
 `g_` - Last non-blank character  
 
 ## Motions
@@ -60,8 +58,8 @@
 `k` - Up  
 `l` - Right  
 
-`12k` - Move up 12 lines  
-`12j` - Move down 12 lines  
+`{int}k` - Move up `{int}` lines  
+`{int}j` - Move down `{int}` lines  
 
 `gg` - Top of file  
 `G` - Bottom of file  
@@ -78,22 +76,27 @@
 
 `w` - Next word  
 `W` - Next WORD (ignoring punctuation)  
+
 `b` - Previous word  
 `B` - Previous WORD  
+
 `e` - End of word  
 `E` - End of WORD  
+
 `ge` - End of previous word  
 `gE` - End of previous WORD  
 
-`fx` - Find next `x` in line  
-`Fx` - Find previous `x` in line  
-`tx` - Move to before next `x`  
-`Tx` - Move to after previous `x`  
+`f{char}` - Find next `{char}` in line  
+`F{char}` - Find previous `{char}` in line  
+
+`t{char}` - Move to before next `{char}`  
+`T{char}` - Move to after previous `{char}`  
+
 `;` - Repeat last f/F/t/T  
 `,` - Repeat last f/F/t/T (reverse)  
 
-`/pattern` - Search forward  
-`?pattern` - Search backward  
+`/{pattern}` - Search for `{pattern}` forward  
+`?{pattern}` - Search for `{pattern}` backward  
 `n` - Next search result  
 `N` - Previous search result  
 
@@ -104,17 +107,17 @@
 `operator + text_object`  
 
 ### Delete (`d`)
-- `d{motion}` - Delete text specified by motion
+- `d{motion}` - Delete text specified by `{motion}`
 - `dd` - Delete current line
 - `D` - Delete from cursor to end of line
 
 ### Change (`c`)
-- `c{motion}` - Change text specified by motion, then enter Insert mode
+- `c{motion}` - Change text specified by `{motion}`, then enter Insert mode
 - `cc` - Change current line and enter Insert mode
 - `C` - Change from cursor to end of line and enter Insert mode
 
 ### Yank/Copy (`y`)
-- `y{motion}` - Yank text specified by motion
+- `y{motion}` - Yank text specified by `{motion}`
 - `yy` - Yank current line
 - `Y` - Yank from cursor to end of line
 
@@ -129,25 +132,25 @@
 
 ### Case Modification
 - `~` - Toggle case of character under cursor
-- `g~{motion}` - Toggle case of text specified by motion
+- `g~{motion}` - Toggle case of text specified by `{motion}`
 - `g~~` - Toggle case of current line
-- `gu{motion}` - Convert text to lowercase
+- `gu{motion}` - Convert text specified by `{motion}` to lowercase
 - `guu` - Convert current line to lowercase
-- `gU{motion}` - Convert text to uppercase
+- `gU{motion}` - Convert text specified by `{motion}` to uppercase
 - `gUU` - Convert current line to uppercase
 
 ### Indentation
-- `>{motion}` - Shift text right
+- `>{motion}` - Shift text specified by `{motion}` right
 - `>>` - Indent current line
-- `<{motion}` - Shift text left
+- `<{motion}` - Shift text specified by `{motion}` left
 - `<<` - Unindent current line
-- `={motion}` - Auto-indent text
+- `={motion}` - Auto-indent text specified by `{motion}`
 - `==` - Auto-indent current line
 
 ### Filtering and Formatting
-- `!{motion}{cmd}` - Filter text through external command
-- `!!{cmd}` - Filter current line through external command
-- `gq{motion}` - Format text according to 'textwidth'
+- `!{motion}{cmd}` - Filter text specified by `{motion}` through external command `{cmd}`
+- `!!{cmd}` - Filter current line through external command `{cmd}`
+- `gq{motion}` - Format text specified by `{motion}` according to 'textwidth'
 - `gqq` - Format current line
 
 ### Examples of Operator + Motion
@@ -210,9 +213,11 @@ Use with operators: `operator + i/a + text_object`
 ### Basic Operations
 `x` - Delete character under cursor  
 `X` - Delete character before cursor  
-`r{char}` - Replace character under cursor with `{char}`  
+
 `p` - Paste after cursor/line  
 `P` - Paste before cursor/line  
+
+`r{char}` - Replace character under cursor with `{char}`  
 `.` - Repeat last change  
 
 ### Undo/Redo
@@ -224,6 +229,10 @@ Use with operators: `operator + i/a + text_object`
 `J` - Join line below to current line (with space)  
 `gJ` - Join line below to current line (without space)  
 
+### Number Operations
+`Ctrl + a` - Increment number under cursor by 1  
+`Ctrl + x` - Decrement number under cursor by 1  
+
 ### Marks and Registers
 `ma` - Set mark `a`  
 `'a` - Jump to mark `a`  
@@ -231,30 +240,26 @@ Use with operators: `operator + i/a + text_object`
 `"ap` - Paste from register `a`  
 `:reg` - Show all registers  
 
-### Search and Replace
-`:s/old/new/` - Replace first occurrence in line  
-`:s/old/new/g` - Replace all in line  
-`:%s/old/new/g` - Replace all in file  
-`:%s/old/new/gc` - Replace all with confirmation  
-`:noh` - Clear search highlighting  
-
 ### Visual Mode Operations
 `gv` - Reselect last visual selection  
 `o` - Move to other end of visual selection  
 
-### Windows and Tabs
-`:sp` - Horizontal split  
-`:vsp` - Vertical split  
-`Ctrl+w w` - Switch windows  
-`Ctrl+w h/j/k/l` - Move between windows  
-`:tabnew` - New tab  
-`gt` - Next tab  
-`gT` - Previous tab  
+## File and Command Operations
 
-### Command Mode Essentials
-`:e filename` - Edit file  
-`:w filename` - Save as  
+`:q` - Close file  
+`:q!` - Quit without checking changes  
+`:qa` - Close all files  
+
+`:w` - Save  
+`:wq` - Save and close file  
+
+`:x` - Save and close file (if changes)  
+
+`:e {filename}` - Edit `{filename}` file  
+`:w {filename}` - Save file as `{filename}`  
+
+`ZZ` - Save and quit  
+`ZQ` - Quit without checking changes  
+
 `:!command` - Execute shell command  
-`:set nu` - Show line numbers  
-`:set rnu` - Show relative line numbers  
-`:help topic` - Get help  
+`:help {topic}` - Go to manual page for `{topic}`  
