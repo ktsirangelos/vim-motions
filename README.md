@@ -1,240 +1,260 @@
+# Vim Quick Reference
+
 ## Exiting
 
 `:q` - Close file  
 `:qa` - Close all files  
-
 `:w` - Save  
 `:wq` / `:x` - Save and close file  
-
 `ZZ` - Save and quit  
 `:q!` / `ZQ` - Quit without checking changes  
-  
+
 ## Modes
-  
-`ESC` - enter normal mode  
 
-`i` - enter insert mode (at cursor)  
-`I` - enter insert mode (at the beginning of the line)  
+`ESC` - Normal mode  
+`i` - Insert mode (at cursor)  
+`I` - Insert mode (at beginning of line)  
+`a` - Insert mode (after cursor)  
+`A` - Insert mode (at end of line)  
+`o` - Open new line below and enter insert mode  
+`O` - Open new line above and enter insert mode  
+`v` - Visual mode (character-wise)  
+`V` - Visual mode (line-wise)  
+`Ctrl+v` - Visual mode (block-wise)  
+`:` - Command mode  
+`R` - Replace mode  
 
-`a` - enter insert mode (after cursor)  
-`A` - enter insert mode (at the end of the line)  
+## Navigation
 
-`o` - open a new line below and enter insert mode  
-`O` - open a new line above and enter insert mode  
+`:12` - Go to line 12  
+`12G` - Go to line 12  
 
-`v` - enter visual mode  
-`:` - enter command mode  
-`R` - enter replace mode  
+`zz` - Center cursor on screen  
+`zt` - Cursor to top of screen  
+`zb` - Cursor to bottom of screen  
 
-### Navigation
+`Ctrl+u` - Half page up  
+`Ctrl+d` - Half page down  
+`Ctrl+b` - Full page up  
+`Ctrl+f` - Full page down  
+`Ctrl+e` - Scroll one line up  
+`Ctrl+y` - Scroll one line down  
 
-`:12` - move to line 12  
+`Ctrl+o` - Jump to previous position  
+`Ctrl+i` - Jump to next position  
+`''` - Jump to last position  
 
-`zz` - center the screen on the cursor  
-`zt` - position cursor at the top of the screen  
-`zb` - position cursor at the bottom of the screen  
+`H` - Top of screen  
+`M` - Middle of screen  
+`L` - Bottom of screen  
 
-`Ctrl + u` - move half a page up  
-`Ctrl + d` - move half a page down  
+`0` - Beginning of line  
+`^` - First non-blank character  
+`$` - End of line  
+`g_` - Last non-blank character  
 
-`Ctrl + e` - move page one line up  
-`Ctrl + y` - move page one line down  
+## Motions
 
-`Ctrl + i` - jump forward to next position  
-`Ctrl + o` - jump back to previous position  
+`h` - Left  
+`j` - Down  
+`k` - Up  
+`l` - Right  
 
-`H` - move to the top of the screen (High)  
-`M` - move to the middle of the screen (Middle)  
-`L` - move to the bottom of the screen (Low)  
+`12k` - Move up 12 lines  
+`12j` - Move down 12 lines  
 
-`0` - move to the beginning of the line  
-`$` - move to the end of the line  
+`gg` - Top of file  
+`G` - Bottom of file  
 
-### Motions
+`(` - Previous sentence  
+`)` - Next sentence  
 
-`h` - move left  
-`j` - move down  
-`k` - move up  
-`l` - move right  
+`{` - Previous paragraph  
+`}` - Next paragraph  
 
-`12k` - move up 12 lines  
-`12j` - move down 12 lines  
+`%` - Matching bracket/parenthesis  
+`*` - Next occurrence of word under cursor  
+`#` - Previous occurrence of word under cursor  
 
-`gg` - move to the top of the file  
-`G` - move to the bottom of the file  
+`w` - Next word  
+`W` - Next WORD (ignoring punctuation)  
+`b` - Previous word  
+`B` - Previous WORD  
+`e` - End of word  
+`E` - End of WORD  
+`ge` - End of previous word  
+`gE` - End of previous WORD  
 
-`0` - move to the beginning of the line  
-`$` - move to the end of the line  
+`fx` - Find next `x` in line  
+`Fx` - Find previous `x` in line  
+`tx` - Move to before next `x`  
+`Tx` - Move to after previous `x`  
+`;` - Repeat last f/F/t/T  
+`,` - Repeat last f/F/t/T (reverse)  
 
-`(` - move to the beginning of the previous sentence  
-`)` - move to the beginning of the next sentence  
+`/pattern` - Search forward  
+`?pattern` - Search backward  
+`n` - Next search result  
+`N` - Previous search result  
 
-`{` - move to the beginning of the previous paragraph  
-`}` - move to the beginning of the next paragraph  
-
-`%` - move to the matching closing character  
-`#` - move to the previous occurrence of the word under the cursor  
-`*` - move to the next occurrence of the word under the cursor  
-
-`w` - move to the beginning of the next word  
-`W` - move to the beginning of the next word (ignoring punctuation)  
-
-`b` - move to the beginning of the previous word  
-`B` - move to the beginning of the previous word (ignoring punctuation)  
-
-`e` - move to the end of the next word  
-`E` - move to the end of the next word (ignoring punctuation)  
-
-`ge` - move to the end of the previous word  
-`gE` - move to the end of the previous word (ignoring punctuation)  
-
-`fx` - find the next occurrence of the character `x` in the line  
-`Fx` - find the previous occurrence of the character `x` in the line  
-
-`tx` - find the character `x` in the line and move the cursor to the character before it  
-`Tx` - find the character `x` in the line and move the cursor to the character after it  
-
-`;` - repeat the last `f`, `F`, `t`, or `T` command  
-`,` - repeat the last `f`, `F`, `t`, or `T` command in the opposite direction  
-
-`/pattern` - search forward for pattern  
-`?pattern` - search backward for pattern  
-`n` - repeat search in same direction  
-`N` - repeat search in opposite direction  
-
-## Editing
+## Operators
 
 ### Operator Usage
-
 `operator + motion`  
 `operator + text_object`  
 
-### 1. Operators
+### Delete (`d`)
+- `d{motion}` - Delete text specified by motion
+- `dd` - Delete current line
+- `D` - Delete from cursor to end of line
 
-*   `d` - Delete:
-    *   `d{motion}` - Delete text specified by motion.
-    *   `dd` - Delete current line.
-    *   `D` - Delete from cursor to end of line (equivalent to `d$`).
+### Change (`c`)
+- `c{motion}` - Change text specified by motion, then enter Insert mode
+- `cc` - Change current line and enter Insert mode
+- `C` - Change from cursor to end of line and enter Insert mode
 
-*   `c` - Change:
-    *   `c{motion}` - Change text specified by motion, then enter Insert mode.
-    *   `cc` - Change current line and enter Insert mode.
-    *   `C` - Change from cursor to end of line and enter Insert mode (equivalent to `c$`).
+### Yank/Copy (`y`)
+- `y{motion}` - Yank text specified by motion
+- `yy` - Yank current line
+- `Y` - Yank from cursor to end of line
 
-*   `y` - Yank (copy):
-    *   `y{motion}` - Yank text specified by motion.
-    *   `yy` - Yank current line.
-    *   `Y` - Yank from cursor to end of line.
+### Substitute (`s`)
+- `s` - Substitute character and enter Insert mode
+- `S` - Substitute entire line and enter Insert mode
 
-*   `s` - Substitute:
-    *   `s` - Substitute character(s) under cursor and enter Insert mode (equivalent to `cl`).
-    *   `S` - Substitute entire current line(s) and enter Insert mode (equivalent to `cc`).
+### Visual Selection
+- `v` - Character-wise visual selection
+- `V` - Line-wise visual selection
+- `Ctrl+v` - Block-wise visual selection
 
-*   Visual Selection:
-    *   `v` - Start character-wise visual selection.
-    *   `V` - Start line-wise visual selection.
-    *   `Ctrl+v` - Start block-wise visual selection.
+### Case Modification
+- `~` - Toggle case of character under cursor
+- `g~{motion}` - Toggle case of text specified by motion
+- `g~~` - Toggle case of current line
+- `gu{motion}` - Convert text to lowercase
+- `guu` - Convert current line to lowercase
+- `gU{motion}` - Convert text to uppercase
+- `gUU` - Convert current line to uppercase
 
-*   Case Modification:
-    *   `~` - Swap case of character under cursor and move right.
-    *   `g~{motion}` - Swap case of text specified by motion.
-    *   `g~~` - Swap case of current line.
-    *   `gu{motion}` - Convert text specified by motion to lowercase.
-    *   `guu` - Convert current line to lowercase.
-    *   `gU{motion}` - Convert text specified by motion to uppercase.
-    *   `gUU` - Convert current line to uppercase.
+### Indentation
+- `>{motion}` - Shift text right
+- `>>` - Indent current line
+- `<{motion}` - Shift text left
+- `<<` - Unindent current line
+- `={motion}` - Auto-indent text
+- `==` - Auto-indent current line
 
-*   Indentation:
-    *   `>{motion}` - Shift text right by 'shiftwidth'.
-    *   `>>` - Indent current line.
-    *   `<{motion}` - Shift text left by 'shiftwidth'.
-    *   `<<` - Unindent current line.
-    *   `={motion}` - Auto-indent text (uses 'equalprg' or internal formatting).
-    *   `==` - Auto-indent current line.
+### Filtering and Formatting
+- `!{motion}{cmd}` - Filter text through external command
+- `!!{cmd}` - Filter current line through external command
+- `gq{motion}` - Format text according to 'textwidth'
+- `gqq` - Format current line
 
-*   Filtering and Formatting:
-    *   `!{motion}{cmd}` - Filter text specified by motion through an external command `{cmd}`.
-    *   `!!{cmd}` - Filter current line through external command `{cmd}`.
-    *   `gq{motion}` - Format text specified by motion according to 'textwidth'.
-    *   `gqq` - Format current line.
-    *   `gw{motion}` - Format text specified by motion according to 'textwidth', keeping cursor position.
-    *   `gww` - Format current line, keeping cursor position.
+### Examples of Operator + Motion
+- `dd` - Delete the current line
+- `dw` - Delete from cursor to beginning of next word
+- `d$` - Delete from cursor to end of line
+- `dG` - Delete from current line to end of file
+- `cc` - Change the entire current line
+- `cw` - Change from cursor to beginning of next word
+- `c0` - Change from cursor to beginning of line
+- `yy` - Yank the current line
+- `yw` - Yank from cursor to beginning of next word
+- `yG` - Yank from current line to end of file
+- `>>` - Indent the current line
+- `>j` - Indent current line and line below
+- `gUU` - Convert current line to uppercase
+- `gUw` - Convert from cursor to next word to uppercase
 
-*   ROT13 Encode:
-    *   `g?{motion}` - ROT13 encode text specified by motion.
-    *   `g??` - ROT13 encode current line.
+## Text Objects
 
-*   Folding:
-    *   `zf{motion}` - Create a fold for the text specified by motion.
-    *   `zF` - Create a fold for the current line.
+Use with operators: `operator + i/a + text_object`
 
+**Inner (`i`) vs Around (`a`)**
+- `w` - word (letters, digits, underscore)
+- `W` - WORD (non-blank characters)
+- `s` - sentence (ends with `.`, `!`, `?`)
+- `p` - paragraph (separated by empty lines)
+- `(` or `b` - parentheses `()`
+- `{` or `B` - curly braces `{}`
+- `[` - square brackets `[]`
+- `<` - angle brackets `<>`
+- `t` - tag block (e.g., `<div>...</div>`)
+- `"` - double quotes
+- `'` - single quotes
+- ``` ` ``` - backticks
 
-### 2. Examples of Operator + Motion
+### Examples of Operator + Text Objects
+- `diw` - Delete **inner** word (word only, no spaces)
+- `daw` - Delete **around** word (word + surrounding space)
+- `ciW` - Change **inner** WORD
+- `cas` - Change **around** sentence
+- `yip` - Yank **inner** paragraph
+- `yap` - Yank **around** paragraph (includes blank lines)
+- `di"` - Delete **inner** content of double quotes
+- `ya'` - Yank **around** single quotes (includes quotes)
+- `ci(` or `cib` - Change **inner** parentheses content
+- `da(` or `dab` - Delete **around** parentheses (includes parentheses)
+- `ci{` or `ciB` - Change **inner** curly braces content
+- `da{` or `daB` - Delete **around** curly braces (includes braces)
+- `ci[` - Change **inner** square brackets content
+- `da<` - Delete **around** angle brackets (includes brackets)
+- `dit` - Delete **inner** tag block content
+- `dat` - Delete **around** tag block (includes tags)
+- `gUiw` - Uppercase **inner** word
+- `>ap` - Indent **around** paragraph
+- `=i{` - Auto-indent **inner** curly brace block
 
-*   `dd` - Delete the current line (operator `d` repeated on the current line)
-*   `dw` - Delete from the cursor to the beginning of the next word
-*   `d$` - Delete from the cursor to the end of the current line
-*   `dG` - Delete from the current line to the end of the file
-*   `cc` - Change the entire current line
-*   `cw` - Change from the cursor to the beginning of the next word
-*   `c0` - Change from the cursor to the beginning of the line
-*   `yy` - Yank (copy) the current line
-*   `yw` - Yank from the cursor to the beginning of the next word
-*   `yG` - Yank from the current line to the end of the file
-*   `>>` - Indent the current line
-*   `>j` - Indent the current line and the line below
-*   `gUU` or `gUgU` - Convert the current line to uppercase
-*   `gUw` - Convert from the cursor to the beginning of the next word to uppercase
-*   `!!sort` - Sort the current line (filters the current line through the `sort` command)
-*   `!Guniq` - Make all lines from the current line to the end of the file unique
+## Other Editing Commands
 
-### 3. Text Objects
+### Basic Operations
+`x` - Delete character under cursor  
+`X` - Delete character before cursor  
+`r{char}` - Replace character under cursor with `{char}`  
+`p` - Paste after cursor/line  
+`P` - Paste before cursor/line  
+`.` - Repeat last change  
 
-*   `w` - word (sequence of letters, digits, and underscore)
-*   `W` - WORD (sequence of non-blank characters, separated by whitespace)
-*   `s` - sentence (ends with `.`, `!`, `?` followed by end-of-line, space or tab)
-*   `p` - paragraph (separated by empty lines)
-*   `b` or `()` - block of parentheses `()`
-*   `B` or `{}` - Block of curly braces `{}`
-*   `[]` - block of square brackets `[]`
-*   `<>` - block of angle brackets `<>`
-*   `t` - tag block (e.g., `<div>...</div>`)
-*   `"` - double quotes `"`
-*   `'` - single quotes `'`
-*   ``` ` ``` - backticks ``` ` ```
+### Undo/Redo
+`u` - Undo last change  
+`Ctrl+r` - Redo last undone change  
+`U` - Undo all changes to current line  
 
-### 4. Examples of Operator + i/a + Text Objects
+### Join Lines
+`J` - Join line below to current line (with space)  
+`gJ` - Join line below to current line (without space)  
 
-*   `diw` - Delete **i**nner **w**ord (deletes the word under the cursor, but not surrounding spaces)
-*   `daw` - Delete **a** **w**ord (deletes the word under the cursor and one surrounding space)
-*   `ciW` - Change **i**nner **W**ORD
-*   `cas` - Change **a** **s**entence
-*   `yip` - Yank **i**nner **p**aragraph
-*   `yap` - Yank **a** **p**aragraph (includes the blank line after/before)
-*   `di"` - Delete **i**nner content of **"**double quotes**"**
-*   `ya'` - Yank **a**round **'**single quotes**'** (includes the quotes)
-*   `ci(` or `cib` - Change **i**nner content of **(**parentheses block**)**
-*   `da(` or `dab` - Delete **a**round **(**parentheses block**)** (includes the parentheses)
-*   `ci{` or `ciB` - Change **i**nner content of **{**curly braces**}**
-*   `da{` or `daB` - Delete **a**round **{**curly braces**}** (includes the braces)
-*   `ci[` - Change **i**nner content of **[**square brackets**]**
-*   `da<` - Delete **a**round **<**angle brackets**>** (includes the brackets)
-*   `dit` - Delete **i**nner **t**ag block (e.g., content of `<div>...</div>`)
-*   `dat` - Delete **a** **t**ag block (e.g., `<div>...</div>` including the tags)
-*   `gUiw` - Uppercase **i**nner **w**ord
-*   `>ap` - Indent **a** **p**aragraph
-*   `=i{` - Auto-indent **i**nner **{**curly brace block**}**
+### Marks and Registers
+`ma` - Set mark `a`  
+`'a` - Jump to mark `a`  
+`"ayy` - Yank to register `a`  
+`"ap` - Paste from register `a`  
+`:reg` - Show all registers  
 
-### 5. Other Editing Commands
+### Search and Replace
+`:s/old/new/` - Replace first occurrence in line  
+`:s/old/new/g` - Replace all in line  
+`:%s/old/new/g` - Replace all in file  
+`:%s/old/new/gc` - Replace all with confirmation  
+`:noh` - Clear search highlighting  
 
-*   `x` - Delete character under cursor (like `dl`)
-*   `X` - Delete character before cursor (like `dh`)
-*   `p` - Paste yanked/deleted text **p**after the cursor (if character-wise) or after the current line (if line-wise)
-*   `P` - Paste yanked/deleted text **P**before the cursor (if character-wise) or before the current line (if line-wise)
-*   `r{char}` - Replace the character under the cursor with `{char}` (stays in Normal mode)
-*   `.` - Repeat the last change
-*   `u` - Undo last change
-*   `Ctrl + r` - Redo last undone change
-*   `J` - Join the line below to the current line (adds a space)
-*   `gJ` - Join the line below to the current line (without adding a space)
+### Visual Mode Operations
+`gv` - Reselect last visual selection  
+`o` - Move to other end of visual selection  
 
+### Windows and Tabs
+`:sp` - Horizontal split  
+`:vsp` - Vertical split  
+`Ctrl+w w` - Switch windows  
+`Ctrl+w h/j/k/l` - Move between windows  
+`:tabnew` - New tab  
+`gt` - Next tab  
+`gT` - Previous tab  
+
+### Command Mode Essentials
+`:e filename` - Edit file  
+`:w filename` - Save as  
+`:!command` - Execute shell command  
+`:set nu` - Show line numbers  
+`:set rnu` - Show relative line numbers  
+`:help topic` - Get help  
