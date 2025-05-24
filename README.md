@@ -1,5 +1,3 @@
-# VIM Motions
-
 ## Exiting
 
 `:q` - Close file  
@@ -130,7 +128,7 @@
 
 *   `s` - Substitute:
     *   `s` - Substitute character(s) under cursor and enter Insert mode (equivalent to `cl` or `Ncl`).
-    *   `S` - Substitute entire current line(s) and enter Insert mode (equivalent to `cc` or `Ncc`).  
+    *   `S` - Substitute entire current line(s) and enter Insert mode (equivalent to `cc` or `Ncc`).\
     Note: Vim also has an `s` *operator* for `s{motion}`, e.g., `siw` to substitute inner word. The commands `s` and `S` are normal mode shortcuts.
 
 *   Visual Selection (these commands start a selection mode; an operator can then be applied to the selection):
