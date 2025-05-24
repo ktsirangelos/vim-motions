@@ -116,7 +116,7 @@
 - `cc` - Change current line and enter Insert mode
 - `C` - Change from cursor to end of line and enter Insert mode
 
-### Yank/Copy (`y`)
+### Yank (`y`)
 - `y{motion}` - Yank text specified by `{motion}`
 - `yy` - Yank current line
 - `Y` - Yank from cursor to end of line
