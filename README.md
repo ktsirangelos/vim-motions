@@ -23,7 +23,7 @@
 `:{int}` - Go to line `{int}`  
 `{int}G` - Go to line `{int}`  
 
-`zz` - Center cursor on screen  
+`zz` - Center current line in window  
 `zt` - Cursor to top of screen  
 `zb` - Cursor to bottom of screen  
 
@@ -39,11 +39,8 @@
 `Ctrl+o` - Jump to previous position  
 `Ctrl+i` - Jump to next position  
 
+`M` - Move cursor to the middle line of the window  
 `''` - Jump to last position  
-
-`H` - Top of screen  
-`M` - Middle of screen  
-`L` - Bottom of screen  
 
 `0` - Beginning of line  
 `$` - End of line  
