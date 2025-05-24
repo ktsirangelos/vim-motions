@@ -56,6 +56,7 @@
   
 `;` - repeat the last `f`, `F`, `t`, or `T` command  
 `,` - repeat the last `f`, `F`, `t`, or `T` command in the opposite direction  
+`.` - repeat the last change  
   
 `zz` - center the screen on the cursor  
   
@@ -69,10 +70,3 @@
 `?pattern` - search backward for pattern  
 `n` - repeat search in same direction  
 `N` - repeat search in opposite direction  
-  
-`ma` - mark position with label 'a' (buffer specific)  
-`'a` - jump to line of mark 'a'  
-`` `a `` - jump to line and column of mark 'a'  
-`mA` - mark position with label 'A' (global)  
-`'A` - jump to line of mark 'A'  
-`` `A `` - jump to line and column of mark 'A'  
